@@ -48,9 +48,11 @@
             <th id="ambbr"></th>
             <th id="20br"></th>
         </tr>
+        
         <tr>
-            <td><input type="button" value="Somar" onclick="somar()">Valor Total</td>
+            <th><input type="button" value="Somar" onclick="somar()"></th>
         </tr>
+        
     </table>
 
     <script>
@@ -58,11 +60,8 @@
         var sh1 = window.document.getElementById('sh1')
         var sh2 = window.document.getElementById('sh2')
         var sh3 = window.document.getElementById('sh3')
-        var ambsh = window.document.getElementById('ambsh')
-        var sh1 = Number(sh1.value)
-        var sh2 = Number(sh2.value)
-        var sh3 = Number(sh3.value)
-        var s = sh1 + sh2 + sh3 
+        var ambsh = window.document.getElementById('ambsh').value
+        res.ambsh.value = `${sh1} + ${sh2} + ${sh3} == ${res.value}`
         }
     </script>
 </body>
