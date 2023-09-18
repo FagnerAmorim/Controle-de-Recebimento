@@ -5,63 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Recebimento</title>
     <style>
-        tr.titulo {
+        .titulo {
             border: 1px solid black;
             background-color: gray;
+            display: flex;
         }
-        tr.res {
+
+        p {
+            padding-right: 100px;
+        }
+        .res {
             height: 20px;
+            padding: 20px;
             background-color: gray;
+            border: 2px solid black;
         }
     </style>
 </head>
 <body>
     <h1>Controle de Recebimento</h1>
-    <table>
-        <tr class="titulo">
-            <th>Ambiente Shell</th>
-            <th>20º Shell</th>
-            <th>Ambiente Vibra</th>
-            <th>20º Vibra</th>
-        </tr>
-        <tr>
-            <td><input type="number" name="sh1" id="sh1"></td>
-            <td><input type="number" name="20sh1" id="20sh1"></td>
-            <td><input type="number" name="br1" id="br1"></td>
-            <td><input type="number" name="20br1" id="20br1"></td>
-        </tr>
-        <tr>
-            <td><input type="number" name="sh2" id="sh2"></td>
-            <td><input type="number" name="20sh2" id="20sh2"></td>
-            <td><input type="number" name="br2" id="br2"></td>
-            <td><input type="number" name="20br2" id="20br2"></td>
-        </tr>
-        <tr>
-            <td><input type="number" name="sh3" id="sh3"></td>
-            <td><input type="number" name="20sh3" id="20sh3"></td>
-            <td><input type="number" name="br3" id="br3"></td>
-            <td><input type="number" name="20br3" id="20br3"></td>
-        </tr>
-        <tr class="res">
-            <th id="ambsh"></th>
-            <th id="20sh"></th>
-            <th id="ambbr"></th>
-            <th id="20br"></th>
-        </tr>
+
+        <div class="titulo">
+            <p>Ambiente Shell</p>
+            <p>20º Shell</p>
+            <p>Ambiente Vibra</p>
+            <p>20º Vibra</p>
+        </div>
+        <div>
+            <input type="number" name="sh1" id="sh1">
+            <input type="number" name="20sh1" id="20sh1">
+            <input type="number" name="br1" id="br1">
+            <input type="number" name="20br1" id="20br1">
+        </div>
         
-        <tr>
-            <th><input type="button" value="Somar" onclick="somar()"></th>
-        </tr>
+        <div>
+            <input type="number" name="sh2" id="sh2">
+            <input type="number" name="20sh2" id="20sh2">
+            <input type="number" name="br2" id="br2">
+            <input type="number" name="20br2" id="20br2">
+        </div>
         
-    </table>
+        <div>
+            <input type="number" name="sh3" id="sh3">
+            <input type="number" name="20sh3" id="20sh3">
+            <input type="number" name="br3" id="br3">
+            <input type="number" name="20br3" id="20br3">
+        </div>
+        
+        
+        <div id="res">
+            <div id="ambsh"></div>
+            <div id="20sh"></div>
+            <div id="ambbr"></div>
+            <div id="20br"></div>
+        </div>
+        
+        
+        <input type="button" value="Somar" onclick="somar()">
+        
+        
+
 
     <script>
         function somar() {
         var sh1 = window.document.getElementById('sh1')
         var sh2 = window.document.getElementById('sh2')
         var sh3 = window.document.getElementById('sh3')
-        var ambsh = window.document.getElementById('ambsh').value
-        res.ambsh.value = `${sh1} + ${sh2} + ${sh3} == ${res.value}`
+        var ambsh = window.document.getElementById('ambsh')
+        var sh1 = Number(sh1.value)
+        var sh2 = Number(sh2.value)
+        var sh3 = Number(sh3.value)
+        var res = sh1 + sh2 + sh3
+        res.innerHTML = `${}`     
         }
     </script>
 </body>
