@@ -6,9 +6,50 @@
     <title>Controle de Recebimento</title>
     <style>
         .titulo {
-            border: 1px solid black;
-            background-color: gray;
             display: flex;
+        }
+
+        .as {
+            margin: 0px;
+            padding: 0px;
+            margin-right: 4px;
+            width: 173px;
+            height: 20px;
+            background-color: gray;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        .vs {
+            margin: 0px;
+            padding: 0px;
+            margin-right: 4px;
+            width: 173px;
+            height: 20px;
+            background-color: gray;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        .ab {
+            margin: 0px;
+            padding: 0px;
+            margin-right: 4px;
+            width: 173px;
+            height: 20px;
+            background-color: gray;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        .vb {
+            margin: 0px;
+            padding: 0px;
+            width: 173px;
+            height: 20px;
+            background-color: gray;
+            text-align: center;
+            border: 2px solid black;
         }
 
         p {
@@ -27,7 +68,7 @@
             border: 2px solid black;
         }
 
-        #vintesh {
+        #vsh {
             height: 20px;
             margin-right: 4px;
             width: 173px;
@@ -43,7 +84,7 @@
             border: 2px solid black;
         }
 
-        #vintebr {
+        #vbr {
             height: 20px;
             width: 173px;
             background-color: gray;
@@ -59,28 +100,28 @@
     <h1>Controle de Recebimento</h1>
 
         <div class="titulo">
-            <p>Ambiente Shell</p>
-            <p>20º Shell</p>
-            <p>Ambiente Vibra</p>
-            <p>20º Vibra</p>
+            <div><p class="as">Ambiente Shell</p></div>
+            <div><p class="vs">20º Shell</p></div>
+            <div><p class="ab">Ambiente Vibra</p></div>
+            <div><p class="vb">20º Vibra</p></div>
         </div>
         <div>
             <input type="number" name="sh1" id="sh1">
-            <input type="number" name="20sh1" id="20sh1">
+            <input type="number" name="20sh1" id="vsh1">
             <input type="number" name="br1" id="br1">
-            <input type="number" name="20br1" id="20br1">
+            <input type="number" name="20br1" id="vbr1">
         </div>
         
         <div>
             <input type="number" name="sh2" id="sh2">
-            <input type="number" name="20sh2" id="20sh2">
+            <input type="number" name="20sh2" id="vsh2">
             <input type="number" name="br2" id="br2">
-            <input type="number" name="20br2" id="20br2">
+            <input type="number" name="20br2" id="vbr2">
         </div>
         
         <div>
             <input type="number" name="sh3" id="sh3">
-            <input type="number" name="20sh3" id="20sh3">
+            <input type="number" name="20sh3" id="vsh3">
             <input type="number" name="br3" id="br3">
             <input type="number" name="20br3" id="20br3">
         </div>
@@ -88,9 +129,9 @@
         
         <div id="res">
             <div id="ambsh"></div>
-            <div id="vintesh"></div>
+            <div id="vsh"></div>
             <div id="ambbr"></div>
-            <div id="vintebr"></div>
+            <div id="vbr"></div>
         </div>
         
         
@@ -105,7 +146,24 @@
         var sh2 = window.document.getElementById('sh2')
         var sh3 = window.document.getElementById('sh3')
         var ambsh = window.document.getElementById('ambsh')
-        ambsh.innerHTML = `${(sh1 + sh2 + sh3).ambsh}`
+        var sh1 = Number(sh1.value)
+        var sh2 = Number(sh2.value)
+        var sh3 = Number(sh3.value)
+        var s = sh1 + sh2 + sh3
+        ambsh.innerHTML = `${s}`
+
+        var vsh1 = window.document.getElementById('vsh1')
+        var vsh2 = window.document.getElementById('vsh2')
+        var vsh3 = window.document.getElementById('vsh3')
+        var vsh = window.document.getElementById('vsh')
+        var vsh1 = Number(vsh1.value)
+        var vsh2 = Number(vsh2.value)
+        var vsh3 = Number(vsh3.value)
+        var s = vsh1 + vsh2 + vsh3
+        vsh.innerHTML = `${s}`
+        
+
+
         }
     </script>
 </body>
