@@ -14,11 +14,44 @@
         p {
             padding-right: 100px;
         }
-        .res {
+
+        #res {
+            display: flex;
+        }
+
+        #ambsh {
             height: 20px;
-            padding: 20px;
+            margin-right: 4px;
+            width: 173px;
             background-color: gray;
             border: 2px solid black;
+        }
+
+        #vintesh {
+            height: 20px;
+            margin-right: 4px;
+            width: 173px;
+            background-color: gray;
+            border: 2px solid black;
+        }
+
+        #ambbr {
+            height: 20px;
+            margin-right: 4px;
+            width: 173px;
+            background-color: gray;
+            border: 2px solid black;
+        }
+
+        #vintebr {
+            height: 20px;
+            width: 173px;
+            background-color: gray;
+            border: 2px solid black;
+        }
+
+        .somar {
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -55,13 +88,13 @@
         
         <div id="res">
             <div id="ambsh"></div>
-            <div id="20sh"></div>
+            <div id="vintesh"></div>
             <div id="ambbr"></div>
-            <div id="20br"></div>
+            <div id="vintebr"></div>
         </div>
         
         
-        <input type="button" value="Somar" onclick="somar()">
+        <input class="somar" type="button" value="Somar" onclick="somar()">
         
         
 
@@ -72,11 +105,7 @@
         var sh2 = window.document.getElementById('sh2')
         var sh3 = window.document.getElementById('sh3')
         var ambsh = window.document.getElementById('ambsh')
-        var sh1 = Number(sh1.value)
-        var sh2 = Number(sh2.value)
-        var sh3 = Number(sh3.value)
-        var res = sh1 + sh2 + sh3
-        res.innerHTML = `${}`     
+        ambsh.innerHTML = `${(sh1 + sh2 + sh3).ambsh}`
         }
     </script>
 </body>
